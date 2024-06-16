@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Waste Ecommerce</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-size: cover;
+            background-color: #f2f2f2;
+        }
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        header {
+            background-color: red;
+            color: white;
+            padding: 15px 0;
+            text-align: center;
+        }
+        .content {
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 20px;
+            border-radius: 8px;
+        }
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+        .product {
+            background-color: white;
+            margin: 10px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 30%;
+            box-sizing: border-box;
+        }
+        .product img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+        .product h3 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .product p {
+            color: #333;
+        }
+        .search-bar {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .search-bar input {
+            width: calc(100% - 30px);
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        @media (max-width: 768px) {
+            .product {
+                width: 45%;
+            }
+        }
+        @media (max-width: 600px) {
+            .content {
+                margin: 10px;
+                padding: 10px;
+            }
+            .product {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#home.html">Home</a>
+        <a href="#shop.html">Shop</a>
+        <a href="#about.html">About Us</a>
+        <a href="#contact.html">Contact</a>
+        <a href="#login.html">Login</a>
+    </div>
+    <header>
+        <div class="header-container">
+            <img src="file:///C:/Users/vedan/Desktop/website%20logo.png.jpg" alt="Website logo" class="Website logo" width="60px", height="70px">
+        <h1>Electronic Waste Ecommerce Website</h1>
+    </header>
+    <div class="content">
+        <h2>Welcome to Our Electronic Waste Ecommerce Website</h2>
+        <p>We are dedicated to managing electronic waste responsibly. Join us in making a difference.</p>
+    </div>
+    <div class="content">
+        <h3>Our Electronic Products Related to Computer Gadgets</h3>
+        <div class="search-bar">
+            <input type="text" id="searchInput" onkeyup="filterProducts()" placeholder="Search for products..">
+        </div>
+        <div class="product-list" id="productList">
+            <div class="Product-List">
+                <div class="product-item">
+                   <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste products related to computer/Electronic Chip_recycling service.jpg.jpg" alt="Electronic Chip">
+                       <h3>Electronic Chip</h3>
+                       <p>Description of Electronic Chip</p>
+                       <p>Price: $10</p>
+                     <button>Add to Cart</button>
+                </div>
+                    <div class="product-item">
+                     <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/RAM_recycling%20service.jpg.png" alt="RAM">
+                        <h3>RAM</h3>
+                        <p>Description of RAM</p>
+                        <p>Price: $20</p>
+                     <button>Add to Cart</button>
+                    </div>
+                       <div class="product-item">
+                         <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/Monitor_recycling%20service.jpg.jpg" alt="Monitor">
+                             <h3>Monitor</h3>
+                             <p>Descripion of Monitor</p>
+                             <p>price: $30</p>
+                         <button>Add to Cart</button>
+                       </div>
+                       <div class="product-item">
+                         <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/HardDrive%20Disk_recycling%20service.jpg.png" alt="Hard Drive Disk">
+                             <h3>Hard Disk Drive</h3>
+                             <p>Descripion of Hard Disk Drive</p>
+                             <p>price: $40</p>
+                         <button>Add to Cart</button>
+                       </div>
+                          <div class="product-item">
+                             <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/Motherboard_recycling%20service.jpg.webp" alt="Mother Board">
+                                 <h3>MotherBoard</h3>
+                                 <p>Description of Motherboard</p>
+                                 <p>Price: $50</p>
+                             <button>Add to Cart</button>  
+                          </div>
+                            <div class="product-item">
+                                  <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/CPU_recycling%20service.jpg.png" alt="CPU">
+                                      <h3>CPU</h3>
+                                      <p>Description of CPU</p>
+                                      <p>Price: $60</p>
+                                     <button>Add to Cart</button>
+                            </div>
+                               <div class="product-item">
+                                  <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/GPU_recycling%20service.jpg.jpg" alt="GPU">
+                                     <h3>GPU</h3>
+                                     <p>Description of GPU</p>
+                                     <p>Price: $70</p>
+                                 <button>Add to Cart</button>
+                               </div>
+                                  <div class="product-item">
+                                     <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/Printer_Recycling%20services.jpg.jpg" alt="Printer">
+                                         <h3>Printer</h3>
+                                         <p>Description of Printer</p>
+                                         <p>Price: $15</p>
+                                     <button>Add to Cart</button>
+                                  </div>
+                                     <div class="product-item">
+                                         <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/Scanner_Recycling%20%20services.jpg.webp" alt="Scanner">
+                                              <h3>Scanner</h3>
+                                               <p>Description of Scanner</p>
+                                               <p>Price: $30</p>
+                                             <button>Add to Cart</button>
+                                     </div>
+                                         <div class="product-item">
+                                            <img src="file:///C:/Users/vedan/Desktop/what-is-an-ssd-11532317218589.png" alt="solid State Drive">
+                                            <h3>solid state Drive</h3>
+                                            <p>Description of Solid State Drive</p>
+                                            <p>Price: $45</p>
+                                       <button>Add to Cart</button>
+                                   </div>
+                                            <div class="product-item">
+                                               <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/Graphics%20Card_recycling%20service.jpg.jpg" alt="Graphic Card">
+                                                  <h3>Graphic Card</h3>
+                                                  <p>Description of Graphic Card</p>
+                                                  <p>Price: $10</p>
+                                             <button>Add to Cart</button>
+                                            </div>
+                                                <section class="product-listing">
+                                                   <h3>Our Electronic Products Related to the Mobile Accessories</h3>
+                                                     <div class="product-item">
+                                                         <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile%20Charger_Recycling%20%20service.jpg.jpg" alt="Mobile Chargers">
+                                                              <h3>Mobile Chargers</h3>
+                                                              <p>Description of Mobile Chargers</p>
+                                                              <p>Price: $5</p>
+                                                             <button>Add to Cart</button>
+                                                     </div>
+                                                         <div class="product-item">
+                                                             <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile%20Battery_Recycling.jpg.jpg" alt="Mobile Battery">
+                                                                <h3>Mobile Battery</h3>
+                                                                <p>Description of Mobile Battery</p>
+                                                                <p>Price: $10</p>
+                                                             <button>Add to Cart</button>
+                                                         </div>
+                                                           <div class="product-item">
+                                                               <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/mobile-charger-adapter-250x250.webp" alt="Mobile Charger Adapter">
+                                                                   <h3>Mobile Charger Adapter</h3>
+                                                                   <p>Description of Mobile Charger Adapter</p>
+                                                                   <p>Price: $10</p>
+                                                                 <button>Add to Cart</button>
+                                                           </div>
+                                                            <div class="product-item">
+                                                               <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile_Recycling%20service.jpg.jpg" alt="Mobile Phone">
+                                                                    <h3>Mobile Phone</h3>
+                                                                    <p>Description of Mobile Phone</p>
+                                                                    <p>Price: $15<p>
+                                                                    <button>Add to Cart</button>
+                                                                 </div>
+                                                                    <div class="product-item">
+                                                                      <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/MemoryCard_Recycling%20service.jpg.png" alt="Mobile Memory Card">
+                                                                          <h3>Mobile Memory Card</h3>
+                                                                          <p>Description of Mobile Memory Card</p>
+                                                                          <p>Price: $20</p>
+                                                                         <button>Add to Cart</button>
+                                                                    </div>
+                                                                       <div class="product-item">
+                                                                            <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/mobile-screen-protector-1000x1000.webp"alt="Mobile Screen Protector">
+                                                                                 <h3>Mobile Screen Protector</h3>
+                                                                                 <p>Description of Screen Protector</p>
+                                                                                 <p>Price: $20<p>
+                                                                             <button>Add to Cart</button>
+                                                                         </div>
+                                                                       <div class="product-item">
+                                                                         <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile%20MemoryChip_Recycling.png.jpg" alt="Mobile Memory Chip">
+                                                                             <h3>Mobile Memory Chip</h3>
+                                                                             <p>Description of Mobile Memory Chip</p>
+                                                                             <p>Price: $25</p>
+                                                                         <button>Add to Cart</button>
+                                                                     </div>
+                                                                        <div class="product-item">
+                                                                          <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile%20Sim%20Card_Recycling%20Service.png.jpg" alt="Mobile Sim Cards">
+                                                                               <h3>Mobile Sim Cards</h3>
+                                                                               <p>Description of Mobile Sim Cards</p>
+                                                                               <p>Price: $30</p>
+                                                                             <button>Add to Cart</button>
+                                                                        </div>
+                                                                            <div class="product item">
+                                                                                 <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile%20Circuit%20Board.jpg" alt="Mobile Circuit Board">
+                                                                                      <h3>Mobile Circuit Board</h3>
+                                                                                      <p>Description of Mobile Circuit Board</p>
+                                                                                      <p>Price: $30</p>
+                                                                                    <button>Add to Cart</button>
+                                                                            </div>
+                                                                            <div class="product-item">
+                                                                              <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile%20Microphone_Recycling%20Service.jpg.jpg" alt="Mobile Microphone">
+                                                                                 <h3>Mobile Microphone</h3>
+                                                                                 <p>Description of Mobile Microphone</p>
+                                                                                 <p>Price: $35</p>
+                                                                             <button>Add to Cart</button>
+                                                                         </div>
+                                                                           <section class="product-liisting">
+                                                                             <h3>Our Electronic Products Related to Battery and Accumulator Accessories</h3>
+                                                                               <div class="product-item">
+                                                                                  <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20Related%20to%20Battery%20and%20accumulator/Hydraulic%20Accumulator_Recycling%20service.jpg.jpg" alt="Hydraulic Accumulator">
+                                                                                      <h3>Hydraulic Accumulator</h3>
+                                                                                      <p>Description of Hydraulic Accumulator</p>
+                                                                                      <p>Price:$10</p>
+                                                                                     <button>Add to Cart</button>
+                                                                               </div>
+                                                                                  <div class="product-item">
+                                                                                     <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20Related%20to%20Battery%20and%20accumulator/isometric%20alkaline%20battery_Recycling%20service.png.jpg" alt="Isometric Alkaline Battery">
+                                                                                          <h3>Isometric Alkaline Battery</h3>
+                                                                                          <p>Description of Isometric Alkaline Battery</p>
+                                                                                          <p>Price:$20</p>
+                                                                                     <button>Add to Cart</button>
+                                                                                  </div>
+                                                                                     <div class="product-item">
+                                                                                         <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20Related%20to%20Battery%20and%20accumulator/Lethium%20Battery_Recycling%20service.jpg.webp" alt="Lethium Battery">
+                                                                                            <h3>Lethium Battery</h3>
+                                                                                            <p>Description of Lethium Battery</p>
+                                                                                            <p>Price:$30</p>
+                                                                                         <button>Add to Cart</button>
+                                                                                     </div>
+                                                                                       <section class="product-listing">
+                                                                                         <h3>Our Electronic Products Related to Medical Requirements</h3>
+                                                                                           <div class="product-item">
+                                                                                              <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20medical%20requirements/CT%20Scan%20Machine%20Recycling_service.jpg.jpg" alt="CT Scan Machine">
+                                                                                               <h3>CT Scan Machine</h3>
+                                                                                               <p>Description of CT Scan Machine</p>
+                                                                                               <p>Price:$100</p>
+                                                                                             <button>Add to Cart</button>
+                                                                                           </div>
+                                                                                           <div class="products">
+                                                                                             <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20medical%20requirements/ElectroCardiogram%20Recycling_service.jpg.jpg" alt="ElectroCardiogram">
+                                                                                               <h3>ElectroCardiogram</h3>
+                                                                                               <p>Description of Cardiogram</p>
+                                                                                               <p>Price: $200</p>
+                                                                                             <button>Add to Cart</button>
+                                                                                           </div>
+                                                                                             <div class="products">
+                                                                                               <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20medical%20requirements/ElectroCardiography%20machine%20Recycling_service.jpg.jpg" alt="ElectroCardiography Machine">
+                                                                                                  <h3>Electrocardiography Machine</h3>
+                                                                                                  <p>Description of Electrocardiography Machine</p>
+                                                                                                  <p>Price: $300</p>
+                                                                                                 <button>Add to Cart</button>
+                                                                                             </div>
+                                                                                                <div class="products">
+                                                                                                  <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20medical%20requirements/MRI%20Machine%20Recycling_service.jpg.webp" alt="MRI Machine">
+                                                                                                     <p>Description of MRI Machine</p>
+                                                                                                     <p>Price: $400</p>
+                                                                                                   <button>Add to Cart</button>
+                                                                                                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Electronic Waste Ecommerce. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function filterProducts() {
+            var input, filter, productList, products, product, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toLowerCase();
+            productList = document.getElementById("productList");
+            products = productList.getElementsByClassName('product');
+
+            for (i = 0; i < products.length; i++) {
+                product = products[i];
+                txtValue = product.textContent || product.innerText;
+                if (txtValue.toLowerCase().indexOf(filter) > -1) {
+                    product.style.display = "";
+                } else {
+                    product.style.display = "none";
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
+
+
