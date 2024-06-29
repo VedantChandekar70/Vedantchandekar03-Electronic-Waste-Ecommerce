@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page - Electronic Waste Ecommerce</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .header {
+            background-color: blue;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .navbar {
+            background-color: red;
+            overflow: hidden;
+        }
+        .navbar a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .navbar a:hover {
+            background-color: darkred;
+        }
+        .content {
+            padding: 20px;
+        }
+        .footer {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+        }
+        .product {
+            border: 1px solid #ddd;
+            margin: 10px;
+            padding: 10px;
+        }
+        .add-to-cart {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            display: inline-block;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .add-to-cart:hover {
+            background-color: darkred;
+        }
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .category {
+            flex: 1 0 21%; /* 5 items per row */
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+        .category h2 {
+            font-size: 18px;
+            color: #333;
+        }
+        .product-features {
+            list-style: none;
+            padding: 0;
+        }
+        .product-features li {
+            background: #f9f9f9;
+            margin: 5px 0;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="file:///C:/Users/vedan/Desktop/electronic-waste_logo.png" width="60px", height="70px">
+        <h1>Electronic Waste Ecommerce Product Page</h1>
+    </div>
+
+    <div class="navbar">
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+    </div>
+
+    <div class="content">
+        <div class="categories">
+            <div class="category">
+                <h2>Electronic Products Related to Computer Gadgets</h2>
+                <div class="product">
+                    <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/Electronic%20Chip_recycling%20service.jpg.jpg" alt="Electronic Chip">
+                    <h3>Electronic Chip</h3>
+                    <p>Price: $10</p>
+                    <ul class="product-features">
+                        <li>Processing Power: Speed and efficiency of data processing.</li>
+                        <li>Memory: Storage capacity for data and instructions.</li>
+                        <li>I/O Ports: Input and output interfaces for communication with other devices.</li>
+                        <li>Power Consumption: Energy efficiency and power requirements.</li>
+                    </ul>
+                    <div class="product-rating">
+                        <p>Rating: 4/5</p>
+                    </div>
+                    <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                </div>
+                   <div class="product">
+                      <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/RAM_recycling%20service.jpg.png" alt="Ram">
+                           <h3>Ram</h3>
+                         <p>Price: $20</p>
+                         <ul class="product-features">
+                        <li>Capacity: The amount of data the RAM can store, usually measured in gigabytes (GB) or terabytes (TB).</li>
+                        <li>Type: Different types of RAM, such as DDR (Double Data Rate), DDR2, DDR3, DDR4, and DDR5, each with different performance characteristics.</li>
+                        <li>Speed: The rate at which data can be read from and written to the RAM, typically measured in megahertz (MHz) or gigahertz (GHz).</li>
+                        <li>Form Factor: Physical size and shape, such as DIMM (Desktop), SO-DIMM (Laptop), and MicroDIMM (small form factor devices).</li>
+                         </ul>
+                         <div class="product-rating">
+                            <p>Rating: 5/5</p>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                    </div>
+                      <div class="product">
+                         <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/Monitor_recycling%20service.jpg.jpg" alt="Monitor">
+                              <h3>Monitor</h3>
+                              <p>Price: $30</p>
+                              <ul class="product-features">
+                                <li>Resolution: The number of pixels that make up the display, such as 1080p (Full HD), 1440p (Quad HD), 2160p (4K Ultra HD), etc.</li>
+                                <li>Screen Size: The diagonal measurement of the display area, typically measured in inches.</li>
+                                <li>Aspect Ratio: The width-to-height ratio of the screen, such as 16:9, 21:9, or 4:3.</li>
+                                <li>Response Time: How quickly a pixel can change colors, typically measured in milliseconds (ms). Lower is better for reducing motion blur.</li>
+                              </ul>
+                                <div class="product-rating">
+                                    <p>Rating: 5/5</p>
+                                </div>
+                                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                            </div>
+                               <div class="product">
+                                  <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/HardDrive%20Disk_recycling%20service.jpg.png" alt="Hard Drive Disk">
+                                       <h3>Hard Drive Disk</h3>
+                                       <p>Price: $40</p>
+                                       <ul class="product-features">
+                                          <li>Storage Capacity: The amount of data the HDD can hold, typically measured in gigabytes (GB) or terabytes (TB). Common capacities range from 500GB to 16TB and beyond.</li>
+                                          <li>Rotational Speed: Measured in revolutions per minute (RPM), common speeds include 5400 RPM, 7200 RPM, and 10,000 RPM. Higher RPMs generally result in faster data access times.</li>
+                                          <li>Cache Size: Also known as buffer size, typically measured in megabytes (MB), it temporarily stores data to improve performance. Common cache sizes range from 8MB to 256MB.</li>
+                                          <li>Data Transfer Rate: The speed at which data is read from or written to the HDD, often specified as the maximum sustained transfer rate in megabytes per second (MB/s).</li>
+                                       </ul>
+                                         <div class="product-rating">
+                                       <p>Rating: 5/5</p>
+                                    </div>
+                                    <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                </div>
+                                   <div class="product">
+                                        <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/Motherboard_recycling%20service.jpg.webp" alt="Motherboard">
+                                           <h3>Motherboard</h3>
+                                           <p>Price: $50</p>
+                                           <ul class="product-features">
+                                              <li>Form Factor: The size and shape of the motherboard, which determines compatibility with cases. Common form factors include ATX, Micro-ATX, and Mini-ITX.</li>
+                                              <li>CPU Socket Type: The specific socket that supports the installation of compatible CPUs, such as LGA1200, AM4, LGA1700, etc.</li>
+                                              <li>Chipset: The chipset determines the motherboard's features and capabilities, impacting everything from CPU compatibility to connectivity options.</li>
+                                              <li>RAM Slots: The number and type of memory slots (e.g., DDR4, DDR5), and the maximum amount of RAM supported.</li>
+                                           </ul>
+                                              <div class="product-rating">
+                                                <p>Rating: 4/5</p>
+                                                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                            </div>
+                                                <div class="product">
+                                                    <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/CPU_recycling%20service.jpg.png" alt="CPU">
+                                                       <h3>CPU</h3>
+                                                        <p>Price: $60</p>
+                                                        <ul class="product-features">
+                                                           <li>Cores: The number of independent processing units within the CPU. More cores can improve performance in multi-threaded applications.</li>
+                                                           <li>Threads: The number of threads the CPU can handle simultaneously, often linked to the core count (e.g., a 4-core CPU with Hyper-Threading might support 8 threads).</li>
+                                                           <li>Base Clock Speed: The standard operating frequency of the CPU, measured in gigahertz (GHz).</li>
+                                                           <li>Boost Clock Speed: The maximum frequency the CPU can reach under certain conditions, often higher than the base clock speed.</li>
+                                                        </ul>
+                                                          <div class="product-rating">
+                                                             <p>Rating: 5/5</p>
+                                                             <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                       </div>
+                                                          <div class="product">
+                                                              <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/GPU_recycling%20service.jpg.jpg" alt="GPU">
+                                                                 <h3>GPU</h3>
+                                                                  <p>Price: $70</p>
+                                                                  <ul class="product-features">
+                                                                    <li>CUDA Cores/Stream Processors: The number of cores that perform parallel processing tasks. NVIDIA GPUs have CUDA cores, while AMD GPUs have Stream Processors.</li>
+                                                                    <li>Base Clock Speed: The default operating frequency of the GPU, measured in megahertz (MHz) or gigahertz (GHz).</li>
+                                                                    <li>Boost Clock Speed: The maximum frequency the GPU can reach under certain conditions, often higher than the base clock speed.</li>
+                                                                  </ul>
+                                                                  <div class="product-rating">
+                                                                    <p>Rating: 5/5</p>
+                                                                    <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                              </div>
+                                                                 <div class="product">
+                                                                    <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/Printer_Recycling%20services.jpg.jpg" alt="Printer">
+                                                                       <h3>Printer</h3>
+                                                                       <p>Price: $15</p>
+                                                                       <ul class="product-features">
+                                                                        <li>Print Resolution: Measured in dots per inch (dpi), such as 600x600 dpi, 1200x1200 dpi, or higher. Higher resolutions result in sharper and more detailed prints.</li>
+                                                                        <li>Print Speed: Measured in pages per minute (PPM) for monochrome and color prints, or in the case of 3D printers, the speed of the extruder.</li>
+                                                                        <li>Color Printing: Capability to print in color or only in monochrome (black and white).</li>
+                                                                        <li>Paper Capacity: The number of sheets the printer can hold in its input and output trays.</li>
+                                                                    </ul>
+                                                                    <div class="product-rating">
+                                                                        <p>Rating: 5/5</p>
+                                                                        <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                                  </div>
+                                                                  <div class="product">
+                                                                    <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/Scanner_Recycling%20%20services.jpg.webp" alt="Scanner">
+                                                                         <h3>Scanner</h3>
+                                                                         <p>Price: $30</p>
+                                                                         <ul class="product-features">
+                                                                         <li>Optical Resolution: Measured in dots per inch (dpi), such as 600x600 dpi, 1200x1200 dpi, or higher. Higher resolutions result in more detailed scans</li>
+                                                                         <li>Interpolated Resolution: Enhanced resolution through software, which can be higher than the optical resolution.</li>
+                                                                         <li>olor Depth: The number of bits per pixel that the scanner can capture, affecting the range of colors. Common color depths include 24-bit, 36-bit, and 48-bit.</li>
+                                                                         <li>Scanning Speed: Measured in pages per minute (PPM) or images per minute (IPM), depending on the scanner type.</li>
+                                                                    </ul>
+                                                                    <div class="product-rating">
+                                                                        <p>Rating: 4/5</p>
+                                                                        <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                                    </div>
+                                                                       <div class="product">
+                                                                          <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/wd-sandisk-solid-state-drive-500x500.webp" alt="Solid State Drive">
+                                                                              <h3>Solid State Drive</h3>
+                                                                              <p>Price: $45</p>
+                                                                              <ul class="product-features">
+                                                                               <li>Speed: SSDs provide significantly faster data read and write speeds compared to traditional Hard Disk Drives (HDDs). This results in quicker boot times, faster file transfers, and overall enhanced system performance.</li>
+                                                                               <li>Durability: SSDs are more durable and reliable than HDDs because they have no moving parts. This makes them less prone to mechanical failures and physical damage from drops or shocks.</li>
+                                                                               <li>Energy Efficiency: SSDs consume less power than HDDs, leading to longer battery life for laptops and reduced energy costs for desktop systems.</li>
+                                                                               <li>Temperature Management: SSDs generate less heat compared to HDDs, which can contribute to better system temperature management and less need for active cooling.</li>
+                                                                              </ul>
+                                                                                                              
+                                                  <div class="product-rating">
+                                                    <p>Rating: 5/5</p>
+                                                    <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                              </div>
+                                              <div class="content">
+                                                <div class="categories">
+                                                    <div class="category">
+                                                        <h2>Electronic Products Related to Mobile Gadgets</h2>
+                                              <div class="product">
+                                                <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile%20Charger_Recycling%20%20service.jpg.jpg" alt="Mobile Charger">
+                                                    <h3>Mobile Charger</h3>
+                                                   <p>Price: $5</p>
+                                                   <ul class="product-features">
+                                                    <li>Fast Charging: Many mobile chargers now support fast charging technologies like Qualcomm Quick Charge, USB Power Delivery (PD), and others, which can significantly reduce the time needed to charge a device.</li>
+                                                    <li>Multiple Ports: Some chargers come with multiple USB ports, allowing users to charge several devices simultaneously.</li>
+                                                    <li>Universal Compatibility: Modern chargers are designed to be compatible with a wide range of devices, including smartphones, tablets, smartwatches, and other USB-powered gadgets.</li>
+                                                    <li>Smart Charging: Smart chargers can detect the connected device and deliver the optimal charging power, which helps in prolonging battery life and ensuring safety.</li>
+                                                </ul>
+                                                   <div class="product-rating">
+                                                     <p>Rating: 5/5</p>
+                                                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                </div>
+                                                   <div class="product">
+                                                       <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile%20Battery_Recycling.jpg.jpg" alt="Mobile Battery">
+                                                           <h3>Mobile Battery</h3>
+                                                           <p>Price: $10</p>
+                                                           <ul class="product-features">
+                                                             <li>Capacity: Mobile batteries come in various capacities measured in mAh (milliampere-hour), which determines how much charge they can store and deliver to devices. Higher capacity models can charge devices multiple times before needing to be recharged themselves.</li>
+                                                             <li>Portability: Designed to be compact and lightweight, mobile batteries are easy to carry in bags, pockets, or even attached to keychains, making them convenient for travel and daily use.</li>
+                                                             <li>Multiple Outputs: Many mobile batteries have multiple USB outputs, allowing users to charge more than one device simultaneously. Some models also feature USB-C and/or Lightning ports for compatibility with a wide range of devices.</li>
+                                                             <li>Fast Charging: High-quality mobile batteries support fast charging technologies such as Quick Charge, USB Power Delivery (PD), or proprietary fast charging protocols from manufacturers like Apple or Samsung. This allows for rapid charging of compatible devices.</li>
+                                                           </ul>
+                                                           <div class="product-rating">
+                                                            <p>Rating: 5/5</p>
+                                                       <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                       </div>
+                                                          <div class="product">
+                                                             <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/mobile-charger-adapter-250x250.webp" alt="Mobile Charger Adapter">
+                                                                  <h3>Mobile Charger Adapter</h3>
+                                                                  <p>Price: $10</p>
+                                                                  <ul class="product-features">
+                                                                    <li>Compact Design: Charger adapters are typically small and lightweight, making them easy to carry in bags, pockets, or travel kits.</li>
+                                                                    <li>Power Output: They provide the necessary power output to charge mobile devices. Outputs are usually in the form of USB ports, which can vary in their power delivery capabilities.</li>
+                                                                    <li>USB Compatibility: Most modern charger adapters feature USB ports that support standard USB-A, USB-C, or Lightning connectors, ensuring compatibility with a wide range of devices including smartphones, tablets, cameras, and other USB-powered gadgets.</li>
+                                                                    <li>Fast Charging Support: Many charger adapters support fast charging technologies such as Qualcomm Quick Charge, USB Power Delivery (PD), or proprietary fast charging protocols from device manufacturers. This allows for faster charging times compared to standard chargers.</li>
+                                                                  </ul>
+                                                                  <div class="product-rating">
+                                                                    <p>Rating: 5/5</p>
+                                                               <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                               </div>
+                                                                  <div class="product">
+                                                                    <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile_Recycling%20service.jpg.jpg" alt="Mobile Phone">
+                                                                       <h3>Mobile phone</h3>
+                                                                       <p>Price: $15</p>
+                                                                       <ul class="product-features">
+                                                                        <li>Operating System: Mobile phones run on operating systems such as Android (Google), iOS (Apple), or sometimes proprietary systems (e.g., Samsung's Tizen). The OS determines the user interface, app compatibility, and overall functionality.</li>
+                                                                        <li>Connectivity: Mobile phones support various connectivity options, including 4G LTE and increasingly 5G for cellular data, Wi-Fi for local network access, Bluetooth for wireless peripherals, and NFC for contactless payments and data transfer.</li>
+                                                                        <li>Display: Modern smartphones feature high-resolution displays ranging from LCD to OLED or AMOLED, offering vibrant colors, sharpness, and often with features like HDR (High Dynamic Range) support for enhanced viewing experiences.</li>
+                                                                        <li>Camera System: Mobile phones typically include front-facing and rear-facing cameras. The rear cameras can have multiple lenses for wide-angle, telephoto, and ultra-wide shots, with capabilities for high-resolution photos and 4K video recording. Front cameras are optimized for selfies and video calls.</li>
+                                                                    </ul>
+                                                                    <div class="product-rating">
+                                                                      <p>Rating: 5/5</p>
+                                                                 <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                                 </div>
+                                                                   <div class="product">
+                                                                      <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/MemoryCard_Recycling%20service.jpg.png" alt="Mobile Memory Card">
+                                                                          <h3>Mobile Memory Card</h3>
+                                                                          <p>Price: $20</p>
+                                                                          <ul class="product-features">
+                                                                            <li>Storage Capacity: Memory cards are available in various capacities ranging from a few gigabytes (GB) to several terabytes (TB). Common capacities include 32GB, 64GB, 128GB, and 256GB, with higher capacities becoming more common over time.</li>
+                                                                            <li>Compatibility: Memory cards are designed to be compatible with different devices that support microSD or SD card slots. Compatibility can vary based on the device's maximum supported capacity and the type of file system (FAT32, exFAT) supported by the device.</li>
+                                                                            <li>Speed Class: Memory cards are classified by speed class ratings such as Class 2, Class 4, Class 6, Class 10, UHS (Ultra High Speed) Speed Class, and Video Speed Class (V6, V10, V30, V60, V90). These ratings indicate the minimum sustained write speed in megabytes per second (MB/s) for recording video and data.</li>
+                                                                            <li>Read and Write Speeds: Besides speed class ratings, memory cards also advertise their maximum read and write speeds in MB/s. Faster read and write speeds contribute to quicker data transfer between the card and the device</li>
+                                                                        </ul>
+                                                                        <div class="product-rating">
+                                                                          <p>Rating: 5/5</p>
+                                                                     <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                                     </div>
+                                                                       <div class="product">
+                                                                          <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/mobile-screen-protector-1000x1000.webp" alt="Mobile Screen Protector">
+                                                                             <h3>Mobile Screen Protector</h3>
+                                                                             <p>Price: $20</p>
+                                                                             <ul class="product-features">
+                                                                                <li>Scratch Resistance: Screen protectors are made from durable materials (plastic or tempered glass) that provide a scratch-resistant barrier against everyday wear and tear, including keys, coins, and other objects that could scratch the screen.</li>
+                                                                                <li>Impact Protection: Tempered glass screen protectors offer enhanced impact protection by absorbing shock and preventing the screen from cracking or shattering upon impact. This can help reduce the risk of costly screen repairs or replacements.</li>
+                                                                                <li>Anti-Smudge and Anti-Fingerprint: Many screen protectors feature oleophobic coatings that repel oils, fingerprints, and smudges, keeping the screen clean and reducing the need for frequent cleaning.</li>
+                                                                                <li>Clarity and Touch Sensitivity: High-quality screen protectors maintain the clarity of the device's display and preserve touch sensitivity, ensuring a smooth and responsive touchscreen experience without compromising on visibility</li>
+                                                                            </ul>
+                                                                            <div class="product-rating">
+                                                                              <p>Rating: 5/5</p>
+                                                                         <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                                    </div>
+                                                                       <div class="product">
+                                                                           <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile%20MemoryChip_Recycling.png.jpg" alt="Mobile Memory Chip">
+                                                                              <h3>Mobile Memory Chip</h3>
+                                                                              <p>Price: $25</p>
+                                                                              <ul class="product-features">
+                                                                                <li>Non-Volatile Storage: Mobile memory chips are non-volatile, meaning they retain stored data even when power is turned off. This makes them ideal for storing operating systems, applications, and user data in mobile devices.</li>
+                                                                                <li>Storage Capacity: Mobile memory chips come in various capacities ranging from a few gigabytes (GB) to several terabytes (TB), catering to different storage needs across smartphones, tablets, and other portable devices.</li>
+                                                                                <li>Speed: NAND flash memory chips vary in speed, with higher-end chips offering faster read and write speeds. This affects the overall performance of the device in terms of data access, app loading times, and multitasking capabilities.</li>
+                                                                                <li>Reliability: Reliable mobile memory chips are crucial for maintaining data integrity and preventing data loss. Advanced error detection and correction techniques ensure reliable operation over the chip's lifespan.</li>
+                                                                            </ul>
+                                                                            <div class="product-rating">
+                                                                              <p>Rating: 5/5</p>
+                                                                         <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                                    </div>
+                                                                       <div class="product">
+                                                                          <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile%20Sim%20Card_Recycling%20Service.png.jpg" alt="Mobile Sim Card">
+                                                                            <h3>Mobile Memory Card</h3>
+                                                                            <p>Prce: $30</p>
+                                                                            <ul class="product-features">
+                                                                                <li>Network Connectivity: Provides access to mobile networks for voice, text, and data services.</li>
+                                                                                <li>Unique Identification: Contains a unique International Mobile Subscriber Identity (IMSI) that identifies the user on the mobile network.</li>
+                                                                                <li>Authentication: Ensures secure access to the mobile network through authentication and encryption.</li>
+                                                                                <li>Storage: Can store contact information, SMS messages, and other data. Typical storage ranges from 64 KB to 256 KB.</li>
+                                                                            </ul>
+                                                                            <div class="product-rating">
+                                                                              <p>Rating: 5/5</p>
+                                                                         <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                                    </div>
+                                                                       <div class="product">
+                                                                          <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile%20Circuit%20Board.jpg" alt="Mobile Circuit Board">
+                                                                              <h3>Mobile Circuit Board</h3>
+                                                                              <p>Price: $30</p>
+                                                                              <ul class="product-features">
+                                                                                <li>Integration of Components: Houses and interconnects all essential components such as the CPU, memory, power management IC, and various sensors.</li>
+                                                                                <li>Compact Design: Designed to fit the small form factor of mobile devices while maintaining functionality and reliability.</li>
+                                                                                <li>Power Management: Includes circuits for power distribution and management, ensuring efficient power usage and battery charging.</li>
+                                                                                <li>Signal Routing: Manages signal routing between various components like the CPU, GPU, memory, and peripheral devices, ensuring efficient communication.</li>
+                                                                              </ul>
+                                                                            <div class="product-rating">
+                                                                                <p>Rating: 5/5</p>
+                                                                           <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                                      </div>
+                                                                         <div class="product">
+                                                                            <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile%20Microphone_Recycling%20Service.jpg.jpg" alt="Mobile Microphone">
+                                                                               <h3>Mobile Microphone</h3>
+                                                                               <p>Price: $30</p>
+                                                                               <ul class="product-features">
+                                                                               <li>Compact Size: Designed to be small and unobtrusive, fitting within the limited space of mobile devices.</li>
+                                                                               <li>High Sensitivity: Capable of picking up a wide range of sound frequencies with high sensitivity, ensuring clear audio capture.</li>
+                                                                               <li>Noise Cancellation: Many mobile microphones include noise-cancellation technology to filter out background noise, improving the clarity of voice recordings and calls.</li>
+                                                                               <li>Directional Sensitivity: Can be omnidirectional (capturing sound from all directions) or unidirectional (focusing on sound from a specific direction), depending on the design and purpose.</li>
+                                                                            </ul>
+                                                                            <div class="product-rating">
+                                                                                <p>Rating: 5/5</p>
+                                                                           <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                                      </div>
+                                                                      <div class="content">
+                                                                        <div class="categories">
+                                                                            <div class="category">
+                                                                                <h2>Electronic Products Related to Battery and Accumulator</h2>
+                                                                                <div class="product">
+                                                                                    <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/E-waste%20products%20Related%20to%20Battery%20and%20accumulator/Hydraulic%20Accumulators.jpg" alt="Hydraulic Accumulator">
+                                                                                           <h3>Hydraulic Accumulator</h3>
+                                                                                           <p>Price: $10</p>
+                                                                                           <ul class="product-features">
+                                                                                            <li>Energy Storage: Hydraulic accumulators store energy in the form of pressurized fluid. This stored energy can be used to supplement pump flow, absorb shocks, or act as an emergency power source.</li>
+                                                                                            <li>Pressure Regulation: They help regulate pressure fluctuations within hydraulic systems by absorbing pressure spikes and providing a consistent pressure supply.</li>
+                                                                                            <li>Shock Absorption: Accumulators dampen hydraulic shocks and pulsations, which helps protect system components from damage caused by sudden pressure changes.</li>
+                                                                                            <li>Emergency Power Source: In case of power failure, accumulators can provide hydraulic energy to critical functions, allowing machines to safely shut down or continue operating.</li>
+                                                                                        </ul>
+                                                                                        <div class="product-rating">
+                                                                                            <p>Rating: 5/5</p>
+                                                                                       <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                                                  </div>
+                                                                                     <div class="product">
+                                                                                        <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/E-waste%20products%20Related%20to%20Battery%20and%20accumulator/Isometric%20Alkaline%20Battery.jpg" alt="Isometric Alkaline Battery">
+                                                                                             <h3>Isometric Alkaline Battery</h3>
+                                                                                             <p>Price: $20</p>
+                                                                                             <ul class="product-features">
+                                                                                               <li>High Energy Density</li>
+                                                                                               <li>Long Shelf Life</li>
+                                                                                               <li>Leak Resistance</li>
+                                                                                               <li>Performance></li>
+                                                                                             </ul>
+                                                                                             <div class="product-rating">
+                                                                                                <p>Rating: 5/5</p>
+                                                                                           <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                                                      </div>
+                                                                                        <div class="product">
+                                                                                            <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/E-waste%20products%20Related%20to%20Battery%20and%20accumulator/Lethium%20Ion%20Battery.webp" alt="Lethium Ion Battery">
+                                                                                                 <h3>Lethium Ion Battery</h3>
+                                                                                                  <p>Price: $30</p>
+                                                                                                  <ul class="product-features">
+                                                                                                    <li>High Energy Density: Li-ion batteries have a high energy density, meaning they can store a large amount of energy in a relatively small and lightweight package. This makes them ideal for portable electronics and electric vehicles.</li>
+                                                                                                    <li>Voltage: A single Li-ion cell typically has a nominal voltage of about 3.6 to 3.7 volts, which is higher than many other battery types. This higher voltage allows for more efficient power delivery.</li>
+                                                                                                    <li>Rechargeability: Li-ion batteries are rechargeable, allowing for multiple charge-discharge cycles. This makes them cost-effective and environmentally friendly over the long term.</li>
+                                                                                                    <li>Fast Charging: Li-ion batteries support fast charging capabilities, allowing them to be charged quickly compared to other battery types. This is especially important for devices that need to be used frequently.</li>
+                                                                                                  </ul>
+                                                                                                  <div class="product-rating">
+                                                                                                    <p>Rating: 5/5</p>
+                                                                                               <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                                                          </div>
+                                                                                          <div class="content">
+                                                                                            <div class="categories">
+                                                                                                <div class="category">
+                                                                                                    <h2>Electronic Products Related to Medical Requirements</h2>
+                                                                                                    <div class="product">
+                                                                                                        <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20medical%20requirements/CT%20Scan%20Machine%20Recycling_service.jpg.jpg" alt="CT Scan Machine">
+                                                                                                             <h3>CT Scan Machine</h3>
+                                                                                                             <p>Price: $100</p>
+                                                                                                             <ul class="product-features">
+                                                                                                                <li>High-Resolution Imaging</li>
+                                                                                                                <li>3D Imaging Capabilities</li>
+                                                                                                                <li>Contrast Enhancement</li>
+                                                                                                                <li>Integration with Other Systems</li>
+                                                                                                             </ul>
+                                                                                                                <div class="product-rating">
+                                                                                                                  <p>Rating: 5/5</p>
+                                                                                    <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                                                </div>
+                                                                                    <div class="product">
+                                                                                        <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20medical%20requirements/ElectroCardiogram%20Recycling_service.jpg.jpg" alt="ElectroCardiogram">
+                                                                                             <h3>ElectroCardiogram</h3>
+                                                                                             <p>Price: $200</p>
+                                                                                             <ul class="product-features">
+                                                                                              <li>Electrical Activity Recording</li>
+                                                                                              <li>Waveform Display</li>
+                                                                                              <li>Heart Rate and Rhythm Analysis</li>
+                                                                                              <li>Diagnosis of Cardiac Conditions</li>
+                                                                                        </ul>
+                                                                                        <div class="product-rating">
+                                                                                            <p>Rating: 5/5</p>
+                                                                                              <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                                                     </div>
+                                                                                        <div class="product">
+                                                                                            <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20medical%20requirements/ElectroCardiography%20machine%20Recycling_service.jpg.jpg" alt="Electrocardiography Machine">
+                                                                                                <h3>Electrocardiography Machine</h3>
+                                                                                                <p>Price: $300</p>
+                                                                                                <ul class="product-features">
+                                                                                                    <li>Multi-Lead Configuration</li>
+                                                                                                    <li>High-Resolution Display</li>
+                                                                                                    <li>Accurate Electrodes</li>
+                                                                                                    <li>Digital Recording and Storage</li>
+                                                                                                </ul>
+                                                                                                <div class="product-rating">
+                                                                                                    <p>Rating: 5/5</p>
+                                                                                                      <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                                                             </div>
+                                                                                                <div class="product">
+                                                                                                    <img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20medical%20requirements/MRI%20Machine%20Recycling_service.jpg.webp" alt="MRI Machine">
+                                                                                                       <p>Price: $400</p>
+                                                                                                       <ul class="product-features">
+                                                                                                        <li>High-Resolution Imaging</li>
+                                                                                                        <li>Use of Magnetic Fields and Radio Waves</li>
+                                                                                                        <li>Multiple Imaging Sequences</li>
+                                                                                                        <li>3D Imaging and Reconstruction</li>
+                                                                                                    </ul>
+                                                                                                    <div class="product-rating">
+                                                                                                        <p>Rating: 5/5</p>
+                                                                                                          <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+                                                                                                 </div>
+                                                                                   <div class="footer">
+                                                                                  <p>&copy; 2024 E-Waste E-commerce. All rights reserved.</p>
+                                                                            </div>
+                                                                                     <script>
+                                                                                        function addToCart() {
+                                                                                            alert('Product added to cart successfully');
+                                                                                        }
+                                                                                    </script>
+                                                                                    </body>
+                                                                                    </html>
+                                                                          
+                                                
+
+                                                
+                                        
+                                        
+                                                
+
+
+                  
+                                                
+                                                  
+
+                                                    
+
+                                                                               
+                                                                                 
+                                                                         
+
+
+
+                      
+                                            
+
+                                                 
+                                                                               
