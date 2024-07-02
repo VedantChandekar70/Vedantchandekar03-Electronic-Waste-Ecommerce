@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart - Electronic Waste E-commerce</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header {
+            background-color: red;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 0.5em 0;
+        }
+        footer {
+            background-color: blue;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .container {
+            margin: 20px;
+        }
+        .cart-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .cart-table th, .cart-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .cart-table th {
+            background-color: #f2f2f2;
+        }
+        .add-to-cart-btn {
+            background-color: red;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .responsive-table {
+            overflow-x: auto;
+        }
+        .message {
+            display: none;
+            color: green;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="file:///C:/Users/vedan/Desktop/trash-can-electronic-waste-gadgets-recycling-icon_176411-6011.avif" width="60px", height="70px">
+        <h1>Electronic Waste E-commerce</h1>
+    </header>
+    <nav>
+        <h2>Shopping Cart</h2>
+    </nav>
+    <div class="container">
+        <div class="responsive-table">
+            <table class="cart-table">
+                <thead>
+                    <tr>
+                        <th>Sno.</th>
+                        <th>Image</th>
+                        <th>Product</th>
+                        <th>Product category</th>
+                        <th>Date</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Total</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-body">
+                    <tr>
+                        <td>1</td>
+                        <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/Electronic%20Chip_recycling%20service.jpg.jpg" alt="Electronic Chip" width="90px"></td>
+                        <td>Electronic Chip</td>                    
+                        <td>Our Electronic Products Related to Computer Gadgets</td>
+                        <td>2024-06-30</td>
+                        <td>$10.00</td>
+                        <td>1</td>
+                        <td>$10.00</td>
+                        <td>In Stock</td>
+                        <td><button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+                    </tr>
+                       <td>2</td>
+                       <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/RAM_recycling%20service.jpg.png" alt="Ram" width="80px"></td>
+                       <td>Ram</td>
+                       <td>Our Electronic Products Related to Computer Gadgets</td>
+                       <td>2024-07-15</td>
+                       <td>$20.00</td>
+                       <td>2</td>
+                       <td>$40.00</td>
+                       <td>In Stock</td>
+                       <td><button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+                       </tr>
+                          <td>3</td>
+                          <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/Monitor_recycling%20service.jpg.jpg" alt="Monitor" width="80px"></td>
+                          <td>Monitor</td>
+                          <td>Our Electronic Products Related to Computer Gadgets</td>
+                          <td>2024-08-20</td>
+                          <td>$30.00</td>
+                          <td>3</td>
+                          <td>$90.00</td>
+                          <td>In Stock</td>
+                          <td><button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+                        </tr>
+                          <td>4</td>
+                          <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/HardDrive%20Disk_recycling%20service.jpg.png" alt="Hard Drive Disk" width="90px"></td>
+                          <td>Hard Drive Disk</td>
+                          <td>Our Electronic Products Related to Computer Gadgets</td>
+                          <td>2024-07-30</td>
+                          <td>$40.00</td>
+                          <td>4</td>
+                          <td>$160.00</td>
+                          <td>In Stock</td>
+                          <td><button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+                    </tr>
+                       <td>5</td>
+                       <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/Motherboard_recycling%20service.jpg.webp" alt="Motherboard" width="80px"></td>
+                       <td>Motherboard</td>
+                       <td>Our Electronic Products Related to Computer Gadgets</td>
+                       <td>2024-08-21</td>
+                       <td>$50.00</td>
+                       <td>5</td>
+                       <td>$250.00</td>
+                       <td>In Stock</td>
+                       <td><button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+                       </tr>
+                          <td>6</td>
+                          <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/CPU_recycling%20service.jpg.png" alt="CPU" width="80px"></td>
+                          <td>CPU</td>
+                          <td>Our Electronic Products Related to Computer Gadgets</td>
+                          <td>2024-08-30</td>
+                          <td>$60.00</td>
+                          <td>6</td>
+                          <td>$360.00</td>
+                          <td>In stock</td>
+                          <td><button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+                          </tr>
+                          <td>7</td>
+                          <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/GPU_recycling%20service.jpg.jpg" alt="GPU" width="80px"></td>
+                          <td>GPU</td>
+                          <td>Our Electronic Products Related to Computer Gadgets</td>
+                          <td>2024-09-25
+                          <td>$70.00</td>
+                          <td>7</td>
+                          <td>$490.00</td>
+                          <td>In Stock</td>
+                          <td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+                          </tr>
+                           <td>8</td>
+                           <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/Printer_Recycling%20services.jpg.jpg" alt="Printer" width="80px"></td>
+                           <td>Printer</td>
+                           <td>Our Electronic Products Related to Computer Gadgets</td>
+                           <td>2024-09-30</td>
+                           <td>$15.00</td>
+                           <td>8</td>
+                           <td>$120.00</td>
+                           <td>In Stock</td>
+                           <td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+                        </tr>
+                        <td>9</td>
+                        <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/Scanner_Recycling%20%20services.jpg.webp" alt="Scanner" width="80px"></td>
+                        <td>Scanner</td>
+                        <td>Our Electronic Products Related to Computer Gadgets</td>
+                        <td>2024-10-04</td>
+                        <td>$30.00</td>
+                        <td>9</td>
+                        <td>$270.00</td>
+                        <td>In Stock</td>
+                        <td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+                    </tr>
+                       <td>10</td>
+                       <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20computer/wd-sandisk-solid-state-drive-500x500.webp" alt="Solid State Drive" width="80px"></td>
+                        <td>Solid State Drive</td>
+                        <td>Our Electronic Products Related to Computer Gadgets</td>
+                        <td>2024-10-07</td>
+                        <td>$45.00</td>
+                        <td>10</td>
+                        <td>$450.00</td>
+                        <td>In Stock</td>
+                        <td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+                        </tr>
+                        <td>11</td>
+                        <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile%20Charger_Recycling%20%20service.jpg.jpg" alt="Mobile Charger" width="80px"></td>
+                        <td>Mobile Charger</td>
+                        <td>Our Electronic Products Related to Mobile Gadgets</td>
+                        <td>2024-10-10</td>
+                        <td>$5.00</td>
+                        <td>11</td>
+                        <td>$55.00</td>
+                        <td>In Stock</td>
+                        <td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+                    </tr>
+                    <td>12</td>
+                    <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile%20Battery_Recycling.jpg.jpg" alt="Mobile Battery" width="80px"></td>
+                    <td>Mobile Battery</td>
+                    <td>Our Electronic Products Related to Mobile Gadgets</td>
+                    <td>2024-10-20</td>
+                    <td>$10.00</td>
+                    <td>12</td>
+                    <td>$120.00</td>
+                    <td>In Stock</td>
+                    <td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+                </tr>
+                <td>13</td>
+                <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/mobile-charger-adapter-250x250.webp" alt="Mobile Charger Adapter" width="80px"></td>
+                <td>Mobile Charger Adapter</td>
+                <td>Our Electronic Products Related to Mobile Gadgets</td>
+                <td>2024-10-25</td>
+                <td>$10.00</td>
+                <td>13</td>
+                <td>$130.00</td>
+                <td>In Stock</td>
+                <td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+            </tr>
+            <td>14</td>
+            <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile_Recycling%20service.jpg.jpg" alt="Mobile Phone" width="80px"></td>
+            <td>Mobile Phone</td>
+            <td>Our Electronic Products Related to Mobile Gadgets</td>
+            <td>2024-10-26</td>
+            <td>$15.00</td>
+            <td>14</td>
+            <td>$210.00</td>
+            <td>In Stock</td>
+            <td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+          </tr>
+          <td>15</td>
+          <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/MemoryCard_Recycling%20service.jpg.png" alt="Mobile Memory Card" width="80px"></td>
+          <td>Mobile Memory Card</td>
+          <td>Our Electronic Products Related to Mobile Gadgets</td>
+          <td>2024-10-28</td>
+          <td>$20.00</td>
+          <td>15</td>
+          <td>$300.00</td>
+          <td>In Stock</td>
+          <td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+        </tr>
+        <td>16</td>
+        <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/mobile-screen-protector-1000x1000.webp" alt="Mobile Screen Protector"  width="80px"></td>
+        <td>Mobile Screen Protector</td>
+        <td>Our Electronic Products Related to Mobile Gadgets</td>
+        <td>2024-10-29</td>
+        <td>$20.00</td>
+        <td>16</td>
+        <td>$320.00</td>
+       <td>In Stock</td>
+         <td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+    </tr>
+    <td>17</td>
+    <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile%20MemoryChip_Recycling.png.jpg" alt="Mobile Memory Chip" width="80px"></td>
+    <td>Mobile Memory Chip</td>
+    <td>Our Electronic Products Related to Mobile Gadgets</td>
+    <td>2024-11-01</td>
+    <td>$25.00</td>
+    <td>17</td>
+    <td>$425.00</td>
+    <td>In Stock</td>
+     <td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+    </tr>
+    <td>18</td>
+    <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile%20Sim%20Card_Recycling%20Service.png.jpg" alt="Mobile Memory Card" width="80px"></td>
+    <td>Mobile Memory Card</td>
+    <td>Our Electronic Products Related to Mobile Gadgets</td>
+    <td>2024-11-03</td>
+    <td>$30.00</td>
+    <td>18</td>
+    <td>$540.00</td>
+    <td>In Stock</td>
+    <td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+  </tr>
+  <td>19</td>
+  <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile%20Circuit%20Board.jpg" alt="Mobile Circuit Board" width="80px"></td>
+  <td>Mobile Circuit Board</td>
+  <td>Our Electronic Products Related to Mobile Gadgets</td>
+  <td>2024-11-05</td>
+  <td>$30.00</td>
+  <td>19</td>
+  <td>$570.00</td>
+  <td>In Stock</td>
+  <td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+  </tr>
+  <td>20</td>
+  <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/Mobile%20Microphone_Recycling%20Service.jpg.jpg" alt="Mobile Microphone" width="80px"></td>
+  <td>Mobile Microphone</td>
+  <td>Our Electronic Products Related to Mobile Gadgets</td>
+  <td>2024-11-06</td>
+  <td>$35.00</td>
+  <td>20</td>
+  <td>$700.00</td>
+  <td>In Stock</td>
+  <td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+  </tr>
+  <td>21</td>
+  <td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/E-waste%20products%20Related%20to%20Battery%20and%20accumulator/Hydraulic%20Accumulators.jpg" alt="Hydraulic Accumulator" width="80px"></td>
+  <td>Hydraulic Accumulator</td>
+  <td>Our Electronic Products Related to Battery and Accumulator</td>
+  <td>2024-11-08</td>
+  <td>$10.00</td>
+  <td>21</td>
+  <td>$210.00</td>
+  <td>In Stock</td>
+  <td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+</tr>
+<td>22</td>
+<td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/E-waste%20products%20Related%20to%20Battery%20and%20accumulator/Isometric%20Alkaline%20Battery.jpg"  alt="Isometric Alkaline Battery" width="80px"></td>
+<td>Isometric Alkaline Battery</td>
+<td>Our Electronic Products Related to Battery and Accumulator</td>
+<td>2024-11-11</td>
+<td>$20.00</td>
+<td>22</td>
+<td>$440.00</td>
+<td>In Stock</td>
+<td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+</tr>
+<td>23</td>
+<td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20mobile/E-waste%20products%20Related%20to%20Battery%20and%20accumulator/Lethium%20Ion%20Battery.webp" alt="Lethium Ion Battery" width="80px"></td>
+<td>Lethium Ion Battery</td>
+<td>Our Electronic Products Related to Battery and Accumulator</td>
+<td>2024-11-13</td>
+<td>$30.00</td>
+<td>23</td>
+<td>$690.00</td>
+<td>In Stock</td>
+<td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+</tr>
+<td>24</td>
+<td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20medical%20requirements/CT%20Scan%20Machine%20Recycling_service.jpg.jpg" alt="CT Scan Machine" width="80px"></td>
+<td>CT Scan Machine</td>
+<td>Our Electronic Products Related to Medical Requirements</td>
+<td>2024-11-15</td>
+<td>$100</td>
+<td>24</td>
+<td>$2400</td>
+<td>In Stock</td>
+<td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+</tr>
+<td>25</td>
+<td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20medical%20requirements/ElectroCardiogram%20Recycling_service.jpg.jpg" alt="ElectroCardiogram" width="80px"></td>
+<td>ElectroCardiogram</td>
+<td>Our Electronic Products Related to Medical Requirements</td>
+<td>2024-11-17</td>
+<td>$200</td>
+<td>25</td>
+<td>$5000</td>
+<td>In Stock</td>
+<td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+</tr>
+<td>26</td>
+<td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20medical%20requirements/ElectroCardiography%20machine%20Recycling_service.jpg.jpg" alt="ElectroCardiography Machine" width="80px"></td>
+<td>ElectroCardiography Machine</td>
+<td>Our Electronic Products Related to Medical Requirements</td>
+<td>2024-11-24</td>
+<td>$300</td>
+<td>26</td>
+<td>$7800</td>
+<td>In Stock</td>
+<td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+</tr>
+<td><img src="file:///C:/Users/vedan/Desktop/Eshop/Eshop-main/uploads/products/E-waste%20products%20related%20to%20medical%20requirements/MRI%20Machine%20Recycling_service.jpg.webp" alt="MRI Machine" width="80px"></td>
+<td>MRI Machine</td>
+<td>Our Electronic Products Related to Medical Requirements</td>
+<td>2024-11-31</td>
+<td>$400</td>
+<td>27</td>
+<td>$10800</td>  
+<td>In Stock</td>
+<td><button class="add-to-cart-btn"  onclick="addToCart()">Add to Cart</button>
+            </table>
+        </div>
+           <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+        <p>class="message" id="cart-message">Product added to cart successfully</p>
+    </div>
+    <footer>
+        <p>© 2024 Electronic Waste E-commerce</p>
+    </footer>
+    <script>
+        function addToCart() {
+            // Simulate adding to cart action
+            // Replace this with actual logic to add product to cart
+            alert('Product added to cart successfully!');
+        }
+</script>
+
+</body>
+</html>
